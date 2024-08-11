@@ -1,0 +1,120 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/inter-v18-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --background: hsl(0, 0%, 12%);
+  --primary: hsl(0, 0%, 96%);
+  --accent: hsl(10, 68%, 47%);
+  --fs-lg: 2.25rem;
+  --fs-med: 1.6rem;
+  --fs-sm: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--background);
+  color: var(--primary);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@media (width > 44em) {
+  :root {
+    --fs-lg: 3rem;
+  }
+}
+
+nav {
+  background-color: #fef4e7;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+    width: 6rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 0 0.6rem;
+  font-size: var(--fs-sm);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+main {
+  width: min(calc(100% - 40px), 70rem);
+  margin-inline: auto;
+}
+
+.main-section {
+  display: flex;
+  padding-top: 2.8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.tex-section,
+.img-section {
+  flex: 1;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+p {
+  line-height: 1.5;
+  font-size: var(--fs-sm);
+  max-width: 70ch;
+}
+
+.img-section {
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
+    /* Darker shadow */ 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.the-image {
+  width: 100%;
+}
